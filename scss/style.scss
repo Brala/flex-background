@@ -28,7 +28,7 @@ header {
     height: 80px;
     width: 100%;
     position: fixed;
-    background: $color-header-bg;
+    background: $color-header-footer-bg;
     z-index: 900;
 }
 
@@ -206,7 +206,7 @@ p {
 footer {
     height: 60px;
     position: fixed;
-    background: rgba(0, 0, 0, 0.8);
+    background: $color-header-footer-bg;
     width: 100%;
     /*??    left:0;*/
     bottom: 0;
