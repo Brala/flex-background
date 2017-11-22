@@ -1,3 +1,5 @@
+@import "settings";
+
 html,
 body {
     margin: 0;
@@ -26,7 +28,7 @@ header {
     height: 80px;
     width: 100%;
     position: fixed;
-    background: rgba(0, 0, 0, .95);
+    background: $color-header-bg;
     z-index: 900;
 }
 
