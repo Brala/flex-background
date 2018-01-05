@@ -37,8 +37,8 @@ a{
     --------------------------  */
 
 .header {
-    width: 100%;
-    height: 50vh;
+    // width: 100%;
+    height: 100%;
     background: 
     linear-gradient(
         rgba(188, 50, 50, 0.25),
@@ -49,6 +49,9 @@ a{
     background-position: center;
 
     padding-top: 1.5rem;
+
+    user-select: none;
+
     &--logo{
         font-size: 2.2rem;
         font-weight: bold;
@@ -60,30 +63,64 @@ a{
         padding-right: 5rem;
         &--ul{
             &--li{
-                float: left;
+                display: inline;
                 padding-right: 1rem;
             }
         }
     }
     &--slogan{
-        margin-left: -30vw;
-        letter-spacing: 0.06em;
-        margin-top: 15vh;
-        font-size: 10vh;
+        margin-left: -40vw;
+        letter-spacing: 0.6vw;
+        margin-top: 8vw;
+        font-size: 5vw;
         text-align: center;
         text-transform: uppercase;
-        text-shadow: black 0 0 50px;
-        line-height: 8vh;
+        text-shadow: black 0 0 3vw;
+        line-height: 8vw;
         span {
             display: block;
-            font-size: 6vh;
-            text-shadow: 0 0 20px;
-            line-height: 2vh;
+            font-size: 4vw;
+            text-shadow: 0 0 1.5vw;
+            line-height: 1vw;
         }
+        &--button{
+            background-image: linear-gradient(rgba(188, 50, 50, 0.9),
+            $color-bg1);
+            // border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            box-shadow: 0 0 1.2rem rgba(0,0,0,0.45);
+            // color: white;
+            font-family: 'Exo', sans-serif;
+            font-size: 1rem;
+            &:hover{
+                position: relative;
+                z-index: 100;
+                background-color: green;
+                box-shadow: 0 0 3rem rgba(255,255,255,0.45);
+
+            }
+        }
+    }
+    &--parallax-img{
+        margin-left: 30vw;
+        margin-top: 4vw;
+        width: 60vw;
+        height: 60vw/16*9;
+        // background-color: transparentize(pink, 0.9);
+        background-image: url(../img/dog.png);
+        background-position: top right;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        box-shadow: 0 0 100px white;
+        pointer-events: none;
     }
 }
 
-
+.BG2{
+    height: 100vh;
+}
 
 
 /* MAIN CONTENT 
