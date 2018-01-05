@@ -129,12 +129,18 @@ a{
             float: none;
             padding-right: 0;
             &--ul{
-                box-shadow: 0 0 1rem white;
+                box-shadow: 0 0 10vw white;
                 &--li{
-                    display: inline;
-                    font-size: 1.5rem;
-                    padding-right: 1rem;
+                    display: block;
+                    float: left;
+                    font-size: 5.5vw;
+                    padding: 3vw;
+                    border-right: 1px solid white;
+                    &:last-child{
+                        border-right: 0;
+                    }
                 }
+
             }
         }
         &--slogan{
