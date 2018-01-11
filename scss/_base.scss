@@ -10,6 +10,10 @@ body {
     color: $color-font-default;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -64,12 +68,12 @@ a {
 }
 
 @mixin title1 {
-    font-size: 72px;
+    font-size: 4vw;
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
 }
 
 @mixin paragraph {
-    font-size: 17px;
+    font-size: 1.3vw;
     font-family: 'Open Sans', sans-serif;
 }
