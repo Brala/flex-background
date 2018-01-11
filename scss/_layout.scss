@@ -1,20 +1,27 @@
-.l-right{
+.l-right {
     float: right;
 }
 
-.l-left{
+.l-left {
     float: left;
 }
 
 .header {
     height: 100%;
     min-height: 8vw + 60vw/1920*1079.9;
+    max-height: 60vw;
     background: linear-gradient( rgba(188, 50, 50, 0.25), $color-bg1), url(../img/2.jpg);
     background-size: cover;
     background-position: center;
     padding-top: 1.5rem;
     user-select: none;
-    @include clearfix;
+    @include clearFix;
+    @include phone {
+        text-align: center;
+        padding-top: 0.5rem;
+        max-height: none;
+    }
+
     &--logo {
         font-size: 2.2rem;
         font-weight: bold;
@@ -22,47 +29,73 @@
         margin-left: 5vw;
         padding: 0.2rem 1rem;
         transition: all 0.8s;
-        &:hover{
+        &:hover {
             text-shadow: 0 0 3px white;
             box-shadow: 0 0 30px white;
-            
+        }
+        @include phone {
+            font-size: 10vw;
+            float: none;
+            padding-left: 0;
         }
     }
     &--navbar {
         float: right;
         padding-right: 6vw;
+        @include phone {
+            float: none;
+            padding-right: 0;
+        }
         &--ul {
+            @include phone {
+                box-shadow: 0 0 10vw white;
+                @include clearFix;
+            }
             &--li {
                 display: inline;
                 font-size: 1.2rem;
                 padding-right: 1.5rem; // LAST!
+                @include phone {
+                    display: inline-block;
+                    font-size: 5.0vw;
+                    padding-right: 0;
+                    border-right: 1px solid white;
+                    &:last-child {
+                        border-right: 0;
+                    }
+                }
                 &--a {
                     text-transform: uppercase;
                     padding: 10px;
                     position: relative;
-                    &:hover{
+                    @include phone {
+                        padding: 5vw 2vw;
+                    }
+                    &:hover {
                         text-shadow: 0 0 3px white;
                     }
-                    &:after, &:before {
+                    &:after,
+                    &:before {
                         content: "";
                         background: white;
                         position: absolute;
                         height: 2px;
                         width: 100%;
                         left: 0px;
-                        opacity:0;
+                        opacity: 0;
                         transition: all 0.2s;
                         box-shadow: 0 0 3px white;
                     }
-                    &:before{
-                        top:0px;
+                    &:before {
+                        top: 0px;
                         transform: translateY(10px);
                     }
-                    &:after{
-                        bottom:0px;
+                    &:after {
+                        bottom: 0px;
                         transform: translateY(-10px);
                     }
-                    &:hover:before, &:hover:after{
+                    &:hover:before,
+                    &:hover:after {
                         opacity: 1;
                         transform: translateY(0px);
                     }
@@ -73,16 +106,35 @@
     &--slogan {
         position: absolute;
         right: 48vw;
-        top: 50%;
+        top: -$parallax-img-height/3;
+        margin-top: 25%;
         letter-spacing: 0.6vw;
-        margin-top: -$parallax-img-height/3;
         font-size: 5vw;
-        text-align: center; // DECENTER???
+        text-align: center;
         text-transform: uppercase;
         text-shadow: black 0 0 3vw;
         line-height: 8vw;
-        span{
+                &:hover + .header--image{
+                    box-shadow: 0 0 8vw white;
+                }
+        @include phone {
+            position: initial;
+            margin-left: auto;
+            margin-right: auto;
+            top: 0vw;
+            margin-top: 25vh;
+            letter-spacing: 1.2vw;
+            font-size: 10vw;
+            text-shadow: black 0 0 6vw;
+            line-height: 16vw;
+        }
+        span {
             display: block;
+            @include phone {
+                display: block;
+                font-size: auto;
+                text-shadow: 0 0 3vw;
+            }
         }
         &__smaller {
             display: block;
@@ -93,17 +145,35 @@
             &:hover {
                 text-shadow: 0 0 4vw;
             }
+            @include phone{
+                font-size: 2rem;
+                line-height: 2.2vw;
+            }
         }
         &--button {
             position: relative;
             z-index: 100;
-            @include button
+            @include button @include phone {
+                background-image: linear-gradient(rgba(188, 50, 50, 0.9), $color-bg1);
+                padding: 0.5rem 1rem;
+                border-radius: 2rem;
+                box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.45);
+                font-family: 'Exo', sans-serif;
+                font-size: 1rem;
+                &:hover {
+                    position: relative;
+                    z-index: 100;
+                    background-color: green;
+                    box-shadow: 0 0 3rem rgba(255, 255, 255, 0.45);
+                }
+            }
         }
     }
-    &--parallax-img {
+
+    &--image {
         margin-left: 30vw;
-        top: 50%;
-        margin-top: -$parallax-img-height/2;
+        top: -$parallax-img-height/2;
+        margin-top: 25%;
         width: 60vw;
         z-index: 10;
         height: $parallax-img-height;
@@ -112,17 +182,26 @@
         background-size: contain;
         background-repeat: no-repeat;
         position: absolute;
-        box-shadow: 0 0 8vw white;
         pointer-events: none;
+        transition: all 0.3s;
+        @include phone {
+            margin-left: 0vw;
+            width: 100vw;
+            height: 100vw/16*9;
+            top: auto;
+            bottom: 0vw;
+        }
     }
 }
-.section1{
+
+#section1 {
     position: relative;
+    background-color: white;
 }
+
 .section {
     width: 30vw;
-    padding: 5vw;
-    // margin: 5vw;
+    padding: 5vw; // margin: 5vw;
     background: grey;
     h2 {
         @include title1;
@@ -143,69 +222,4 @@
     right: -20vw;
     width: 0px;
     height: 0px;
-}
-
-@include phone {
-    .header {
-        text-align: center;
-        padding-top: 0.5rem;
-        &--logo {
-            font-size: 2.5rem;
-            float: none;
-            padding-left: 0;
-        }
-        &--navbar {
-            float: none;
-            padding-right: 0;
-            &--ul {
-                box-shadow: 0 0 10vw white;
-                &--li {
-                    display: block;
-                    float: left;
-                    font-size: 5.5vw;
-                    padding: 3vw;
-                    border-right: 1px solid white;
-                    &:last-child {
-                        border-right: 0;
-                    }
-                }
-            }
-        }
-        &--slogan {
-            margin-left: 0;
-            letter-spacing: 1.2vw;
-            margin-top: 16vw;
-            font-size: 10vw;
-            text-align: center;
-            text-transform: uppercase;
-            text-shadow: black 0 0 6vw;
-            line-height: 16vw;
-            span {
-                display: block;
-                font-size: 8vw;
-                text-shadow: 0 0 3vw;
-                line-height: 2vw;
-            }
-            &--button {
-                background-image: linear-gradient(rgba(188, 50, 50, 0.9), $color-bg1);
-                padding: 0.5rem 1rem;
-                border-radius: 2rem;
-                box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.45);
-                font-family: 'Exo', sans-serif;
-                font-size: 1rem;
-                &:hover {
-                    position: relative;
-                    z-index: 100;
-                    background-color: green;
-                    box-shadow: 0 0 3rem rgba(255, 255, 255, 0.45);
-                }
-            }
-        }
-        &--parallax-img {
-            margin-left: 0vw;
-            width: 100vw;
-            height: 100vw/16*9;
-            bottom: 0vw;
-        }
-    }
 }
