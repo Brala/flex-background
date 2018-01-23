@@ -1,14 +1,21 @@
-// ----- VARIABLES ------
+//     --------------------------  
+//  mixed rules of SMACSS & BEM & ITCSS? methodologies
+//     --------------------------  
+
+
+// ----- VARIABLES/Settings ------
 @import "settings";
-// ----- Base/@mixins ------
+// ----- Tools/@mixins-functions ------
+@import "tools";
+// ----- Base-Generic/Normalize-Resets ------
 @import "base";
-// ----- VARIABLES ------
+// ----- Layout? ------  OBJECTS/Components?
 @import "layout";
-// ----- VARIABLES ------
+// ----- Modules ------  OBJECTS/Components?
 @import "module";
  
 // /* HEADER + NAVIGATION 
-//     --------------------------  */
+//     --------- -----------------  */
 
 
 /* MAIN CONTENT 
