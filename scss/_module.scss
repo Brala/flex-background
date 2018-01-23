@@ -3,6 +3,7 @@
     min-height: 8vw + 60vw/1920*1079.9;
     max-height: 60vw;
     background: linear-gradient( rgba(188, 50, 50, 0.25), $color-bg1), url(../img/2.jpg);
+    color: $color-font-header;
     background-size: cover;
     background-position: center;
     padding-top: 1.5rem;
@@ -194,6 +195,12 @@
         z-index: 10;
         pointer-events: none;
         transition: box-shadow 0.3s;
+        @include tablet {
+            margin-left: 22vw;
+            margin-top: 20%;
+            height:$parallax-img-height*1.2;
+            width: 60vw*1.2;
+        }
         @include phone {
             margin-left: 0vw;
             width: 100vw;
@@ -207,9 +214,7 @@
     }
 }
 
-.l-background{
-    width: 100%;
-}
+
 .BG1{
     background-color: white;
 }
@@ -222,32 +227,69 @@
     padding: 5vw;
     // box-sizing: border-box;
     &--decorative {
-        border-top: 50vw solid rgb(23, 23, 23);
-        border-left: 50vw solid transparent;
-        border-right: 50vw solid transparent;
+        border-top: 43vw solid rgb(23, 23, 23);
+        border-left: 43vw solid transparent;
+        border-right: 43vw solid transparent;
         position: absolute;
         left: 20vw;
         top: 0;
         width: 0px;
         height: 0px;
+        @include phone{
+            border-top: 60vw solid rgb(23, 23, 23);
+            border-left: 60vw solid transparent;
+            border-right: 60vw solid transparent; 
+        }
     }
     &--article {
         max-width: 35vw;
         padding: 5vw; // margin: 5vw;
+        margin-left: -5vw;
         position: relative;
         z-index: 10;
-        background: grey;
+        // background: grey
+        @include tablet{
+            max-width: none;
+            width: 55vw;
+        }
+        @include phone{
+            max-width: none;
+            width: 100vw;
+            margin-top: 30vw;
+            text-align: center
+        }
         .h2 {
             @include title1;
+            margin-top: -3vw;
             margin-left: -1vw;
         }
         .p {
             @include paragraph;
-            margin-bottom: 4vw;
+            margin-top: 4vw;
+            margin-bottom: 5vw;
+            @include phone {
+                margin-top: 20vw;
+                margin-bottom: 26vw;
+            }
         }
         a {
             @include button;
             margin-left: -1vw;
+        }
+    }
+    &--image {
+        background: url(../img/notebook.png);
+        @include box(40vw, 23.34vw);
+        background-repeat: no-repeat;
+        background-size: contain;
+        @include absolute(top 2vw right -45vw);
+        @include tablet{
+         @include box(50vw, 35.51vw)  
+         top: 7vw;
+         right: -42vw; 
+        }
+        @include phone{
+            display: none;
         }
     }
 }

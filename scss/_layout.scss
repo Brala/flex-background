@@ -6,3 +6,9 @@
     float: left;
 }
 
+.l-background{
+    width: 100%;
+    @include phone{
+    height: 100%;
+    }
+}
