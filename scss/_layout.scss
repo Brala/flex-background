@@ -9,6 +9,15 @@
 .l-background{
     width: 100%;
     @include phone{
-    height: 100%;
+    min-height: 100%;
     }
+}
+
+
+.l-BG1{
+    background-color: $BG1-color;
+}
+
+.l-BG2{
+    background-color: $BG2-color;;
 }

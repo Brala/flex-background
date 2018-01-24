@@ -47,4 +47,10 @@ a {
     text-decoration: none;
     color: $color-font-header;
 }
-
+// -----------------  ?? -------------------
+.h2{
+    @include title1;
+}
+.p {
+    @include paragraph;
+}

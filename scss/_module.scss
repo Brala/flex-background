@@ -214,11 +214,6 @@
     }
 }
 
-
-.BG1{
-    background-color: white;
-}
-
 .m-section1 {
     position: relative;
     width: 80vw;
@@ -259,12 +254,10 @@
             text-align: center
         }
         .h2 {
-            @include title1;
             margin-top: -3vw;
             margin-left: -1vw;
         }
         .p {
-            @include paragraph;
             margin-top: 4vw;
             margin-bottom: 5vw;
             @include phone {
@@ -284,12 +277,23 @@
         background-size: contain;
         @include absolute(top 2vw right -45vw);
         @include tablet{
-         @include box(50vw, 35.51vw)  
+         @include box(50vw, 35.51vw);
          top: 7vw;
          right: -42vw; 
         }
         @include phone{
             display: none;
+        }
+    }
+}
+
+.m-section{
+    .h2{
+        text-align: center;
+    }
+    &--wrapper{
+        &--description{
+            
         }
     }
 }
