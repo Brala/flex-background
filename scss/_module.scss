@@ -164,19 +164,6 @@
         &--button {
             position: relative;
             z-index: 100;
-            @include button @include phone {
-                background-image: linear-gradient(rgba(188, 50, 50, 0.9), $color-bg1);
-                padding: 0.5rem 1rem;
-                border-radius: 2rem;
-                box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.45);
-                font-family: 'Exo', sans-serif;
-                font-size: 1rem;
-                &:hover {
-                    position: relative;
-                    z-index: 100;
-                    background-color: green;
-                    box-shadow: 0 0 3rem rgba(255, 255, 255, 0.45);
-                }
             }
         }
     }
@@ -266,7 +253,6 @@
             }
         }
         a {
-            @include button;
             margin-left: -1vw;
         }
     }
@@ -288,12 +274,61 @@
 }
 
 .m-section{
+    @include clearFix;
+    position: relative;
     .h2{
         text-align: center;
+        padding: 5vw 0;
     }
-    &--wrapper{
+    .collapsible{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1200px;
+        margin: auto;
+        padding-bottom: 5vw;
+    }
+    &--decorative{
+        position: absolute;
+        top: 20%;
+        left: 0;
+        border-top: 10rem transparent solid;
+        border-bottom: 10rem transparent solid;
+        border-left: 10rem orange solid;
+
+    }
+    &--container{
+        width: 400px;
+        @include clearFix;
+        float: left;
+        position: relative;
+        z-index: 10;
+        &--icon{
+            background-color: $color-bg1;
+            @include box(60px);
+            border-radius: 100%;
+            float: left;
+            position: relative;
+            text-align: center;
+            transition: box-shadow 0.1s ease;
+            &:hover{
+                box-shadow: 4px 4px 1px rgba(0,0,0,0.3);
+                .fa{
+                    color: grey;
+                    
+                }
+            }
+            .fa{
+                color: white;
+                font-size: 32px;
+                margin: 15px;
+                transition: color 0.2s ease;
+            }
+        }
         &--description{
-            
+            float: right;
+            width: 300px;
+            margin: 20px;
         }
     }
 }

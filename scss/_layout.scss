@@ -13,11 +13,20 @@
     }
 }
 
-
+.l-wrapper{
+    max-width: 980px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .l-BG1{
     background-color: $BG1-color;
 }
 
 .l-BG2{
     background-color: $BG2-color;;
+}
+.l-BGFooter{
+    background-color: $BGFooter-color;
 }

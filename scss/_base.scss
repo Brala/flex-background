@@ -54,3 +54,6 @@ a {
 .p {
     @include paragraph;
 }
+.button {
+    @include button;
+}
