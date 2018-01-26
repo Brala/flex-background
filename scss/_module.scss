@@ -16,14 +16,13 @@
         padding-top: 0.5rem;
         max-height: none;
     }
-
     &--logo {
         font-size: 2.2rem;
         font-weight: bold;
         float: left;
         margin-left: 5vw;
         padding: 0.2rem 1rem;
-        transition: box-shadow  0.8s;
+        transition: box-shadow 0.8s;
         &:hover {
             text-shadow: 0 0 3px white;
             box-shadow: 0 0 30px white;
@@ -45,7 +44,7 @@
             float: none;
             padding-right: 0;
         }
-        @include tablet{
+        @include tablet {
             padding: 0;
         }
         &--ul {
@@ -67,7 +66,7 @@
                         border-right: 0;
                     }
                 }
-                @include tablet{
+                @include tablet {
                     padding-right: 1vw;
                     font-size: 2.3vw;
                 }
@@ -121,7 +120,7 @@
         text-transform: uppercase;
         text-shadow: black 0 0 3vw;
         line-height: 8vw;
-        &:hover + .m-header--image{
+        &:hover+.m-header--image {
             box-shadow: 0 0 8vw white;
         }
         @include phone {
@@ -137,7 +136,6 @@
         }
         @include tablet {
             top: -$parallax-img-height/8;
-
         }
         span {
             display: block;
@@ -156,7 +154,7 @@
             &:hover {
                 text-shadow: 0 0 4vw;
             }
-            @include phone{
+            @include phone {
                 font-size: 2rem;
                 line-height: 2.2vw;
             }
@@ -164,10 +162,8 @@
         &--button {
             position: relative;
             z-index: 100;
-            
         }
     }
-
     &--image {
         margin-left: 30vw;
         top: -$parallax-img-height/2;
@@ -185,7 +181,7 @@
         @include tablet {
             margin-left: 22vw;
             margin-top: 20%;
-            height:$parallax-img-height*1.2;
+            height: $parallax-img-height*1.2;
             width: 60vw*1.2;
         }
         @include phone {
@@ -204,10 +200,9 @@
 .m-section1 {
     position: relative;
     width: 80vw;
-    min-width:1024px;
+    min-width: 1024px;
     margin: auto;
-    padding: 5vw;
-    // box-sizing: border-box;
+    padding: 5vw; // box-sizing: border-box;
     &--decorative {
         border-top: 43vw solid rgb(23, 23, 23);
         border-left: 43vw solid transparent;
@@ -217,10 +212,10 @@
         top: 0;
         width: 0px;
         height: 0px;
-        @include phone{
+        @include phone {
             border-top: 60vw solid rgb(23, 23, 23);
             border-left: 60vw solid transparent;
-            border-right: 60vw solid transparent; 
+            border-right: 60vw solid transparent;
         }
     }
     &--article {
@@ -228,13 +223,12 @@
         padding: 5vw; // margin: 5vw;
         margin-left: -5vw;
         position: relative;
-        z-index: 10;
-        // background: grey
-        @include tablet{
+        z-index: 10; // background: grey
+        @include tablet {
             max-width: none;
             width: 55vw;
         }
-        @include phone{
+        @include phone {
             max-width: none;
             width: 100vw;
             margin-top: 30vw;
@@ -261,26 +255,33 @@
         @include box(40vw, 23.34vw);
         background-repeat: no-repeat;
         background-size: contain;
-        @include absolute(top 2vw right -45vw);
-        @include tablet{
-         @include box(50vw, 35.51vw);
-         top: 7vw;
-         right: -42vw; 
+        transition: filter 0.2s ease;
+        &:hover {
+            // -webkit-filter: drop-shadow(5px 5px 5px #222);
+            filter: drop-shadow(5px 5px 5px #222); // filter: url(#drop-shadow);
+            // -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+            // filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
         }
-        @include phone{
+        @include absolute(top 2vw right -45vw);
+        @include tablet {
+            @include box(50vw, 35.51vw);
+            top: 7vw;
+            right: -42vw;
+        }
+        @include phone {
             display: none;
         }
     }
 }
 
-.m-section{
+.m-section {
     @include clearFix;
     position: relative;
-    .h2{
+    .h2 {
         text-align: center;
         padding: 5vw 0;
     }
-    .collapsible{
+    .collapsible {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -288,22 +289,21 @@
         margin: auto;
         padding-bottom: 5vw;
     }
-    &--decorative{
+    &--decorative {
         position: absolute;
         top: 20%;
         left: 0;
         border-top: 10rem transparent solid;
         border-bottom: 10rem transparent solid;
         border-left: 10rem orange solid;
-
     }
-    &--container{
+    &--container {
         width: 400px;
         @include clearFix;
         float: left;
         position: relative;
         z-index: 10;
-        &--icon{
+        &--icon {
             background-color: $color-bg1;
             @include box(60px);
             border-radius: 100%;
@@ -311,24 +311,180 @@
             position: relative;
             text-align: center;
             transition: box-shadow 0.1s ease;
-            &:hover{
-                box-shadow: 4px 4px 1px rgba(0,0,0,0.3);
-                .fa{
+            &:hover {
+                box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.3);
+                .fa {
                     color: grey;
-                    
                 }
             }
-            .fa{
+            .fa {
                 color: white;
                 font-size: 32px;
                 margin: 15px;
                 transition: color 0.2s ease;
             }
         }
-        &--description{
+        &--description {
             float: right;
             width: 300px;
             margin: 20px;
         }
+    }
+}
+
+.sect3 {
+    position: relative;
+}
+
+.m-section3 {
+    &--decorative {
+        border-top: 25vw transparent solid;
+        border-right: 25vw orange solid;
+        border-bottom: 25vw transparent solid;
+        position: absolute;
+        right: 0;
+        top: -4vw;
+    }
+    .h2 {
+        padding-top: 100px;
+        padding-bottom: 80px;
+    }
+    &--row {
+        padding-bottom: 200px;
+        width: 3000px; // background: pink;
+        display: flex;
+        @include phone {
+            width: 100%;
+            flex-wrap: wrap;
+        }
+        &--cnt {
+            width: 300px;
+            min-height: 300px;
+            margin-right: 60px;
+            &__text {
+                @extend .m-section3--row--cnt;
+                background: transparent;
+                margin-right: 150px;
+                position: relative;
+                p {
+                    margin-top: 15px;
+                    font-size: 18px;
+                }
+                a {
+                    position: absolute;
+                    bottom: 15px;
+                }
+            }
+            &__rhombus {
+                @extend .m-section3--row--cnt;
+                transform: skewX(-30deg);
+                position: relative;
+                overflow: hidden;
+                transform-origin: top left;
+                &::after {
+                    content: "";
+                    transform: skewX(30deg);
+                    background-repeat: no-repeat;
+                    background-image: url(../img/layer4.0.png);
+                    background-position: top left;
+                    position: absolute;
+                    left: -330px;
+                    transform-origin: top left;
+                    width: 1000%;
+                    height: 1000%
+                }
+                &--number {
+                    position: absolute;
+                    top: 10px;
+                    right: 40px;
+                    font-size: 56px;
+                    font-weight: bold;
+                    transform: skewX(30deg);
+                }
+                &--description {
+                    position: absolute;
+                    width: 250px;
+                    bottom: 20px;
+                    left: 40px;
+                    transform: skewX(30deg);
+                    h3 {
+                        font-size: 30px;
+                        padding: 10px 0;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.foo {
+    color: white;
+    &--h2 {
+        text-align: center;
+        padding-top: 90px;
+        padding-bottom: 90px;
+        color: rgb(159,159,159);
+    }
+    &--flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include phone{
+            justify-content: center;
+        }
+        &--container {
+            // min-width: 300px;
+            padding-bottom: 50px;
+            @include phone{
+                text-align: center;
+            }
+            i{
+                font-size: 50px;
+                float: left;
+                padding-top: px;
+                padding-right: 20px;
+            }
+            &--cont{
+                float: right;
+                h3{
+                    padding-bottom: 10px;
+                }
+            }
+        }
+        &__2 {
+            display: flex;
+            justify-content: center;
+            padding-top: 40px;
+            padding-bottom: 25px;
+            @include phone{
+                flex-wrap: wrap;
+                padding-top: 30px;
+            }
+            i {
+                font-size: 22px;
+                padding: 0 20px;
+            }
+        }
+    }
+    &--horizontal-line {
+        width: 750px;
+        border-top: 2px white solid;
+        margin: 0 auto;
+        padding-bottom: 25px;
+    }
+    &--p {
+        text-align: center;
+        padding-bottom: 50px;
+    }
+    &--decorative {
+        position: absolute;
+        z-index:-1;
+        bottom: 0;
+        right: -20px;
+        border-left: 160px transparent solid;
+        border-bottom: 160px orange solid;
+        border-right: 160px transparent solid;
     }
 }
