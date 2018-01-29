@@ -1,4 +1,14 @@
-.m-header {
+// 1. HEADER
+// 2. SECTION 1
+// 3. SECTION 2
+// 4. SECTION 3
+// 5. SECTION 4
+// 6. SECTION 5
+// 7. FOOTER
+// ---------------------------------------------------
+// ------- 1.HEADER ----------------------------------
+// ---------------------------------------------------
+.m-hdr {
     height: 100%;
     min-height: 8vw + 60vw/1920*1079.9;
     max-height: 60vw;
@@ -120,7 +130,7 @@
         text-transform: uppercase;
         text-shadow: black 0 0 3vw;
         line-height: 8vw;
-        &:hover+.m-header--image {
+        &:hover+.m-hdr--image {
             box-shadow: 0 0 8vw white;
         }
         @include phone {
@@ -197,6 +207,9 @@
     }
 }
 
+// -----------------------------------------------------
+// ------- SECTION 1 -----------------------------------
+// -----------------------------------------------------
 .m-section1 {
     position: relative;
     width: 80vw;
@@ -274,6 +287,9 @@
     }
 }
 
+// ------------------------------------------------------
+// -------- SECTION 2 -----------------------------------
+// ------------------------------------------------------
 .m-section {
     @include clearFix;
     position: relative;
@@ -332,6 +348,9 @@
     }
 }
 
+// ------------------------------------------------------
+// -------- SECTION 3 -----------------------------------
+// ------------------------------------------------------
 .sect3 {
     position: relative;
 }
@@ -418,37 +437,140 @@
     }
 }
 
+// -------------------------- // --------------------------
+// ------- SECTION 4 -------- // --------------------------
+// -------------------------- // --------------------------
+.m-section4 {
+    &--h2 {
+        text-align: center;
+        padding-top: 100px;
+    }
+    &--cnt {
+        display: flex;
+        justify-content: space-between; // flex-wrap: wrap;
+        padding-top: 100px;
+        padding-bottom: 200px;
+        &--card {
+            // background: pink;
+            box-shadow: 0 0 20px lightgrey;
+            border: 15px white solid;
+            @include box(250px);
+            margin: 0 auto;
+            transform-origin: 50% 50%;
+            overflow: hidden;
+            transform: rotate(45deg);
+            margin-top: 50px;
+            &.is-active {
+                @include box(350px);
+                margin-top: 0px;
+                z-index: 10;
+                & .m-section4--cnt--card--rhomb {
+                    @include box(504px);
+                    transform: rotate(-45deg) translateY(-106px);
+                }
+            }
+            &--rhomb {
+                @include box(355px);
+                margin: 0 auto;
+                transform-origin: 50% 50%;
+                overflow: hidden;
+                transform: rotate(-45deg) translateY(-74px);
+                &--img {
+                    // @include box(450px);
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            &--name {
+                position: relative;
+                z-index: 10;
+                background-color: rgb(37, 37, 37);
+            }
+            &--title {
+                // position: absolute;
+                display: inline-block;
+                background-color: orange;
+                bottom: 0;
+            }
+        }
+    }
+    .decorative {
+        border-top: transparent 15vw solid;
+        border-left: black 15vw solid;
+        border-bottom: transparent 15vw solid;
+        position: absolute;
+        top: -15vw;
+        left: 0;
+    }
+}
 
+// -----------------------------------------------------
+// ------- SECTION 5 -----------------------------------
+// -----------------------------------------------------
+.m-section5 {
+    @include clearFix;
+    &--h2 {
+        padding-top: 100px;
+        padding-left: 100px;
+    }
+    &--cnt {
+        width: 70%;
+        padding-top: 110px;
+        padding-bottom: 160px;
+        float: right;
+
+        &--icon.fa {
+            font-size: 40px;
+            float: left;
+            display: block;
+            width: 6%;
+        }
+        &--text {
+            width: 94%;
+            margin-top: 15px;
+            display: inline-block;
+            // float: right;
+        }
+        &--author {
+            margin-top: 30px;
+            margin-left: 6%;
+        }
+    }
+}
+
+// -----------------------------------------------------
+// -------- FOOTER -------------------------------------
+// -----------------------------------------------------
 .foo {
     color: white;
     &--h2 {
         text-align: center;
         padding-top: 90px;
         padding-bottom: 90px;
-        color: rgb(159,159,159);
+        color: rgb(159, 159, 159);
     }
     &--flex {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        @include phone{
+        @include phone {
             justify-content: center;
         }
         &--container {
             // min-width: 300px;
             padding-bottom: 50px;
-            @include phone{
+            @include phone {
                 text-align: center;
             }
-            i{
+            i {
                 font-size: 50px;
                 float: left;
                 padding-top: px;
                 padding-right: 20px;
             }
-            &--cont{
+            &--cont {
                 float: right;
-                h3{
+                h3 {
                     padding-bottom: 10px;
                 }
             }
@@ -458,7 +580,7 @@
             justify-content: center;
             padding-top: 40px;
             padding-bottom: 25px;
-            @include phone{
+            @include phone {
                 flex-wrap: wrap;
                 padding-top: 30px;
             }
@@ -480,7 +602,7 @@
     }
     &--decorative {
         position: absolute;
-        z-index:-1;
+        z-index: -1;
         bottom: 0;
         right: -20px;
         border-left: 160px transparent solid;

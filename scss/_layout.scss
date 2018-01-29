@@ -10,7 +10,7 @@
     width: 100%;
     @include phone{
     min-height: 100%;
-    }
+}
 }
 
 .l-wrapper{
@@ -26,10 +26,10 @@
 
 .l-BG2{
     background-color: $BG2-color;;
+    position: relative;
 }
 .l-BGFooter{
     background: $BGFooter-color url(../img/Layer7.png) no-repeat;
-    // background-image: ;
     background-size: cover;
     position: relative;
     z-index: -1;
