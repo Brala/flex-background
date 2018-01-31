@@ -8,6 +8,7 @@
 
 .l-background{
     width: 100%;
+    position: relative;
     @include phone{
     min-height: 100%;
 }

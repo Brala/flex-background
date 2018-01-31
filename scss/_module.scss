@@ -217,7 +217,7 @@
     margin: auto;
     padding: 5vw; // box-sizing: border-box;
     &--decorative {
-        border-top: 43vw solid rgb(23, 23, 23);
+        border-top: 43vw solid $borderColor-decorative1;
         border-left: 43vw solid transparent;
         border-right: 43vw solid transparent;
         position: absolute;
@@ -226,7 +226,7 @@
         width: 0px;
         height: 0px;
         @include phone {
-            border-top: 60vw solid rgb(23, 23, 23);
+            border-top: 60vw solid $borderColor-decorative1;
             border-left: 60vw solid transparent;
             border-right: 60vw solid transparent;
         }
@@ -311,7 +311,7 @@
         left: 0;
         border-top: 10rem transparent solid;
         border-bottom: 10rem transparent solid;
-        border-left: 10rem orange solid;
+        border-left: 10rem $borderColor-decorative2 solid;
     }
     &--container {
         width: 400px;
@@ -358,7 +358,7 @@
 .m-section3 {
     &--decorative {
         border-top: 25vw transparent solid;
-        border-right: 25vw orange solid;
+        border-right: 25vw $borderColor-decorative2 solid;
         border-bottom: 25vw transparent solid;
         position: absolute;
         right: 0;
@@ -496,7 +496,7 @@
     }
     .decorative {
         border-top: transparent 15vw solid;
-        border-left: black 15vw solid;
+        border-left: $borderColor-decorative1 15vw solid;
         border-bottom: transparent 15vw solid;
         position: absolute;
         top: -15vw;
@@ -518,7 +518,6 @@
         padding-top: 110px;
         padding-bottom: 160px;
         float: right;
-
         &--icon.fa {
             font-size: 40px;
             float: left;
@@ -528,12 +527,91 @@
         &--text {
             width: 94%;
             margin-top: 15px;
-            display: inline-block;
-            // float: right;
+            display: inline-block; // float: right;
         }
         &--author {
             margin-top: 30px;
             margin-left: 6%;
+        }
+        &--photos{
+            margin-left: 85px;
+        }
+    }
+    .decorative {
+        border-top: $borderColor-decorative1 314px solid;
+        border-right: $borderColor-decorative1 314px solid;
+        border-bottom: transparent 314px solid;
+        border-left: transparent 314px solid;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .decorative2 {
+        border-left: $borderColor-decorative2 475px solid;
+        border-top: transparent 475px solid;
+        border-bottom: transparent 475px solid;
+        position: absolute;
+        top: -75px;
+        left: 0;
+    }
+    
+    &--portrait {
+        box-shadow: 0 0 20px lightgrey;
+        border: 15px white solid;
+        @include box(250px);
+        // margin: 0 auto;
+        transform-origin: 50% 50%;
+        overflow: hidden;
+        transform: rotate(45deg);
+        &__small{
+            @extend .m-section5--portrait;
+            float: left;
+            @include box(50px);
+            border: none;
+            margin-top: 50px;
+            margin-right: 30px;
+        }
+        &__large{
+            @extend .m-section5--portrait;
+            
+        }
+        &.is-active {
+            @include box(350px);
+            margin-top: 0px;
+            z-index: 10;
+            & .m-section5--portrait--rhomb {
+                @include box(504px);
+                transform: rotate(-45deg) translateY(-106px);
+            }
+        }
+        &--rhomb {
+            @include box(355px);
+            margin: 0 auto;
+            transform-origin: 50% 50%;
+            overflow: hidden;
+            transform: rotate(-45deg) translateY(-74px);
+            &__small{
+                @extend .m-section5--portrait--rhomb;
+                
+            @include box(80px);
+            
+            transform: rotate(-45deg) translateY(-15px);
+            
+            }
+            &__large{
+                @extend .m-section5--portrait--rhomb;
+            }
+            &--img {
+                width: 100%;
+                height: auto;
+                &__small{
+                    @extend .m-section5--portrait--rhomb--img;
+            
+                }
+                &__large{
+                    @extend .m-section5--portrait--rhomb--img;
+                }
+            }
         }
     }
 }
