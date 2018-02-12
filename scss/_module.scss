@@ -1,0 +1,708 @@
+// 1. HEADER
+// 2. SECTION 1
+// 3. SECTION 2
+// 4. SECTION 3
+// 5. SECTION 4
+// 6. SECTION 5
+// 7. FOOTER
+// ---------------------------------------------------
+// ------- 1.HEADER ----------------------------------
+// ---------------------------------------------------
+.m-hdr {
+    height: 100%;
+    min-height: 8vw + 60vw/1920*1079.9;
+    max-height: 60vw;
+    background: linear-gradient( rgba(188, 50, 50, 0.25), $color-bg1), url(../img/2.jpg);
+    color: $color-font-header;
+    background-size: cover;
+    background-position: center;
+    padding-top: 1.5rem;
+    user-select: none;
+    position: relative;
+    z-index: 0;
+    @include clearFix;
+    @include phone {
+        text-align: center;
+        padding-top: 0.5rem;
+        max-height: none;
+    }
+    &--logo {
+        font-size: 2.2rem;
+        font-weight: bold;
+        float: left;
+        margin-left: 5vw;
+        padding: 0.2rem 1rem;
+        transition: box-shadow 0.8s;
+        &:hover {
+            text-shadow: 0 0 3px white;
+            box-shadow: 0 0 30px white;
+        }
+        @include phone {
+            font-size: 10vw;
+            float: none;
+            padding-left: 0;
+        }
+        @include tablet {
+            font-size: 4.5vw;
+            padding-left: 0;
+        }
+    }
+    &--navbar {
+        float: right;
+        padding-right: 6vw;
+        @include phone {
+            float: none;
+            padding-right: 0;
+        }
+        @include tablet {
+            padding: 0;
+        }
+        &--ul {
+            @include phone {
+                box-shadow: 0 0 10vw white;
+                @include clearFix;
+                margin: 0 -1vh;
+            }
+            &--li {
+                display: inline;
+                font-size: 1.2rem;
+                padding-right: 1.5rem; // LAST!
+                @include phone {
+                    display: inline-block;
+                    font-size: 5.0vw;
+                    padding-right: 0;
+                    border-right: 1px solid white;
+                    &:last-child {
+                        border-right: 0;
+                    }
+                }
+                @include tablet {
+                    padding-right: 1vw;
+                    font-size: 2.3vw;
+                }
+                &--a {
+                    text-transform: uppercase;
+                    padding: 10px;
+                    position: relative;
+                    @include phone {
+                        padding: 5vw 2vw;
+                    }
+                    &:hover {
+                        text-shadow: 0 0 3px white;
+                    }
+                    &:after,
+                    &:before {
+                        content: "";
+                        background: white;
+                        position: absolute;
+                        height: 2px;
+                        width: 100%;
+                        left: 0px;
+                        opacity: 0;
+                        transition: all 0.2s;
+                        box-shadow: 0 0 3px white;
+                    }
+                    &:before {
+                        top: 0px;
+                        transform: translateY(10px);
+                    }
+                    &:after {
+                        bottom: 0px;
+                        transform: translateY(-10px);
+                    }
+                    &:hover:before,
+                    &:hover:after {
+                        opacity: 1;
+                        transform: translateY(0px);
+                    }
+                }
+            }
+        }
+    }
+    &--slogan {
+        position: absolute;
+        right: 48vw;
+        top: -$parallax-img-height/3;
+        margin-top: 25%;
+        letter-spacing: 0.6vw;
+        font-size: 5vw;
+        text-align: center;
+        text-transform: uppercase;
+        text-shadow: black 0 0 3vw;
+        line-height: 8vw;
+        &:hover+.m-hdr--image {
+            box-shadow: 0 0 8vw white;
+        }
+        @include phone {
+            position: initial;
+            margin-left: auto;
+            margin-right: auto;
+            top: 0vw;
+            margin-top: 25vh;
+            letter-spacing: 1.2vw;
+            font-size: 10vw;
+            text-shadow: black 0 0 6vw;
+            line-height: 16vw;
+        }
+        @include tablet {
+            top: -$parallax-img-height/8;
+        }
+        span {
+            display: block;
+            @include phone {
+                display: block;
+                font-size: auto;
+                text-shadow: 0 0 3vw;
+            }
+        }
+        &__smaller {
+            display: block;
+            font-size: 4vw;
+            text-shadow: 0 0 1.5vw;
+            line-height: 1vw;
+            transition: text-shadow 100ms ease-out;
+            &:hover {
+                text-shadow: 0 0 4vw;
+            }
+            @include phone {
+                font-size: 2rem;
+                line-height: 2.2vw;
+            }
+        }
+        &--button {
+            position: relative;
+            z-index: 100;
+        }
+    }
+    &--image {
+        margin-left: 30vw;
+        top: -$parallax-img-height/2;
+        margin-top: 25%;
+        width: 60vw;
+        height: $parallax-img-height;
+        background-image: url(../img/Dog.png);
+        background-position: top right;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        z-index: 10;
+        pointer-events: none;
+        transition: box-shadow 0.3s;
+        @include tablet {
+            margin-left: 22vw;
+            margin-top: 20%;
+            height: $parallax-img-height*1.2;
+            width: 60vw*1.2;
+        }
+        @include phone {
+            margin-left: 0vw;
+            width: 100vw;
+            height: 100vw/16*9;
+            top: auto;
+            bottom: 0vw;
+        }
+        @include tablet {
+            top: -$parallax-img-height/3;
+        }
+    }
+}
+
+// -----------------------------------------------------
+// ------- SECTION 1 -----------------------------------
+// -----------------------------------------------------
+.m-section1 {
+    position: relative;
+    width: 80vw;
+    min-width: 1024px;
+    margin: auto;
+    padding: 5vw; // box-sizing: border-box;
+    &--decorative {
+        border-top: 43vw solid $borderColor-decorative1;
+        border-left: 43vw solid transparent;
+        border-right: 43vw solid transparent;
+        position: absolute;
+        left: 20vw;
+        top: 0;
+        width: 0px;
+        height: 0px;
+        @include phone {
+            border-top: 60vw solid $borderColor-decorative1;
+            border-left: 60vw solid transparent;
+            border-right: 60vw solid transparent;
+        }
+    }
+    &--article {
+        max-width: 35vw;
+        padding: 5vw; // margin: 5vw;
+        margin-left: -5vw;
+        position: relative;
+        z-index: 10; // background: grey
+        @include tablet {
+            max-width: none;
+            width: 55vw;
+        }
+        @include phone {
+            max-width: none;
+            width: 100vw;
+            margin-top: 30vw;
+            text-align: center
+        }
+        .h2 {
+            margin-top: -3vw;
+            margin-left: -1vw;
+        }
+        .p {
+            margin-top: 4vw;
+            margin-bottom: 5vw;
+            @include phone {
+                margin-top: 20vw;
+                margin-bottom: 26vw;
+            }
+        }
+        a {
+            margin-left: -1vw;
+        }
+    }
+    &--image {
+        background: url(../img/notebook.png);
+        @include box(40vw, 23.34vw);
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: filter 0.2s ease;
+        &:hover {
+            // -webkit-filter: drop-shadow(5px 5px 5px #222);
+            filter: drop-shadow(5px 5px 5px #222); // filter: url(#drop-shadow);
+            // -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+            // filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+        }
+        @include absolute(top 2vw right -45vw);
+        @include tablet {
+            @include box(50vw, 35.51vw);
+            top: 7vw;
+            right: -42vw;
+        }
+        @include phone {
+            display: none;
+        }
+    }
+}
+
+// ------------------------------------------------------
+// -------- SECTION 2 -----------------------------------
+// ------------------------------------------------------
+.m-section {
+    @include clearFix;
+    position: relative;
+    .h2 {
+        text-align: center;
+        padding: 5vw 0;
+    }
+    .collapsible {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1200px;
+        margin: auto;
+        padding-bottom: 5vw;
+    }
+    &--decorative {
+        position: absolute;
+        top: 20%;
+        left: 0;
+        border-top: 10rem transparent solid;
+        border-bottom: 10rem transparent solid;
+        border-left: 10rem $borderColor-decorative2 solid;
+    }
+    &--container {
+        width: 400px;
+        @include clearFix;
+        float: left;
+        position: relative;
+        z-index: 10;
+        &--icon {
+            background-color: $color-bg1;
+            @include box(60px);
+            border-radius: 100%;
+            float: left;
+            position: relative;
+            text-align: center;
+            transition: box-shadow 0.1s ease;
+            &:hover {
+                box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.3);
+                .fa {
+                    color: grey;
+                }
+            }
+            .fa {
+                color: white;
+                font-size: 32px;
+                margin: 15px;
+                transition: color 0.2s ease;
+            }
+        }
+        &--description {
+            float: right;
+            width: 300px;
+            margin: 20px;
+        }
+    }
+}
+
+// ------------------------------------------------------
+// -------- SECTION 3 -----------------------------------
+// ------------------------------------------------------
+.sect3 {
+    position: relative;
+}
+
+.m-section3 {
+    &--decorative {
+        border-top: 25vw transparent solid;
+        border-right: 25vw $borderColor-decorative2 solid;
+        border-bottom: 25vw transparent solid;
+        position: absolute;
+        right: 0;
+        top: -4vw;
+    }
+    .h2 {
+        padding-top: 100px;
+        padding-bottom: 80px;
+    }
+    &--row {
+        padding-bottom: 200px;
+        width: 3000px; // background: pink;
+        display: flex;
+        @include phone {
+            width: 100%;
+            flex-wrap: wrap;
+        }
+        &--cnt {
+            width: 300px;
+            min-height: 300px;
+            margin-right: 60px;
+            &__text {
+                @extend .m-section3--row--cnt;
+                background: transparent;
+                margin-right: 150px;
+                position: relative;
+                p {
+                    margin-top: 15px;
+                    font-size: 18px;
+                }
+                a {
+                    position: absolute;
+                    bottom: 15px;
+                }
+            }
+            &__rhombus {
+                @extend .m-section3--row--cnt;
+                transform: skewX(-30deg);
+                position: relative;
+                overflow: hidden;
+                transform-origin: top left;
+                &::after {
+                    content: "";
+                    transform: skewX(30deg);
+                    background-repeat: no-repeat;
+                    background-image: url(../img/layer4.0.png);
+                    background-position: top left;
+                    position: absolute;
+                    left: -330px;
+                    transform-origin: top left;
+                    width: 1000%;
+                    height: 1000%
+                }
+                &--number {
+                    position: absolute;
+                    top: 10px;
+                    right: 40px;
+                    font-size: 56px;
+                    font-weight: bold;
+                    transform: skewX(30deg);
+                }
+                &--description {
+                    position: absolute;
+                    width: 250px;
+                    bottom: 20px;
+                    left: 40px;
+                    transform: skewX(30deg);
+                    h3 {
+                        font-size: 30px;
+                        padding: 10px 0;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// -------------------------- // --------------------------
+// ------- SECTION 4 -------- // --------------------------
+// -------------------------- // --------------------------
+.m-section4 {
+    &--h2 {
+        text-align: center;
+        padding-top: 100px;
+    }
+    &--cnt {
+        display: flex;
+        justify-content: space-between; // flex-wrap: wrap;
+        padding-top: 100px;
+        padding-bottom: 200px;
+        position: relative;
+        &--button-left{
+            border-right: $borderColor-decorative2 50px solid;
+            border-top: transparent 50px solid;
+            border-bottom: transparent 50px solid;
+            position: absolute;
+            left: -185px;
+            top: 275px;
+        }
+        &--button-right{
+            border-left: $borderColor-decorative2 50px solid;
+            border-top: transparent 50px solid;
+            border-bottom: transparent 50px solid;
+            position: absolute;
+            right: -185px;
+            top: 275px;
+            
+        }
+        &--card {
+            // background: pink;
+            box-shadow: 0 0 20px lightgrey;
+            border: 15px white solid;
+            @include box(250px);
+            margin: 0 auto;
+            transform-origin: 50% 50%;
+            overflow: hidden;
+            transform: rotate(45deg);
+            margin-top: 50px;
+            &.is-active {
+                @include box(350px);
+                margin-top: 0px;
+                z-index: 10;
+                & .m-section4--cnt--card--rhomb {
+                    @include box(504px);
+                    transform: rotate(-45deg) translateY(-106px);
+                }
+            }
+            &--rhomb {
+                @include box(355px);
+                margin: 0 auto;
+                transform-origin: 50% 50%;
+                overflow: hidden;
+                transform: rotate(-45deg) translateY(-74px);
+                &--img {
+                    // @include box(450px);
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            &--name {
+                position: relative;
+                z-index: 10;
+                background-color: rgb(37, 37, 37);
+            }
+            &--title {
+                // position: absolute;
+                display: inline-block;
+                background-color: orange;
+                bottom: 0;
+            }
+        }
+    }
+    .decorative {
+        border-top: transparent 15vw solid;
+        border-left: $borderColor-decorative1 15vw solid;
+        border-bottom: transparent 15vw solid;
+        position: absolute;
+        top: -15vw;
+        left: 0;
+    }
+}
+
+// -----------------------------------------------------
+// ------- SECTION 5 -----------------------------------
+// -----------------------------------------------------
+.m-section5 {
+    @include clearFix;
+    &--h2 {
+        padding-top: 100px;
+        padding-left: 100px;
+    }
+    &--cnt {
+        width: 70%;
+        padding-top: 110px;
+        padding-bottom: 160px;
+        float: right;
+        &--icon.fa {
+            font-size: 40px;
+            float: left;
+            display: block;
+            width: 6%;
+        }
+        &--text {
+            width: 94%;
+            margin-top: 15px;
+            display: inline-block; // float: right;
+        }
+        &--author {
+            margin-top: 30px;
+            margin-left: 6%;
+        }
+        &--photos{
+            margin-left: 85px;
+        }
+    }
+    .decorative {
+        border-top: $borderColor-decorative1 314px solid;
+        border-right: $borderColor-decorative1 314px solid;
+        border-bottom: transparent 314px solid;
+        border-left: transparent 314px solid;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .decorative2 {
+        border-left: $borderColor-decorative2 475px solid;
+        border-top: transparent 475px solid;
+        border-bottom: transparent 475px solid;
+        position: absolute;
+        top: -75px;
+        left: 0;
+    }
+    
+    &--portrait {
+        box-shadow: 0 0 20px lightgrey;
+        border: 15px white solid;
+        @include box(250px);
+        // margin: 0 auto;
+        transform-origin: 50% 50%;
+        overflow: hidden;
+        transform: rotate(45deg);
+        &__small{
+            @extend .m-section5--portrait;
+            float: left;
+            @include box(50px);
+            border: none;
+            margin-top: 50px;
+            margin-right: 30px;
+        }
+        &__large{
+            @extend .m-section5--portrait;
+            
+        }
+        &.is-active {
+            @include box(350px);
+            margin-top: 0px;
+            z-index: 10;
+            & .m-section5--portrait--rhomb {
+                @include box(504px);
+                transform: rotate(-45deg) translateY(-106px);
+            }
+        }
+        &--rhomb {
+            @include box(355px);
+            margin: 0 auto;
+            transform-origin: 50% 50%;
+            overflow: hidden;
+            transform: rotate(-45deg) translateY(-74px);
+            &__small{
+                @extend .m-section5--portrait--rhomb;
+                
+            @include box(80px);
+            
+            transform: rotate(-45deg) translateY(-15px);
+            
+            }
+            &__large{
+                @extend .m-section5--portrait--rhomb;
+            }
+            &--img {
+                width: 100%;
+                height: auto;
+                &__small{
+                    @extend .m-section5--portrait--rhomb--img;
+            
+                }
+                &__large{
+                    @extend .m-section5--portrait--rhomb--img;
+                }
+            }
+        }
+    }
+}
+
+// -----------------------------------------------------
+// -------- FOOTER -------------------------------------
+// -----------------------------------------------------
+.foo {
+    color: white;
+    &--h2 {
+        text-align: center;
+        padding-top: 90px;
+        padding-bottom: 90px;
+        color: rgb(159, 159, 159);
+    }
+    &--flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include phone {
+            justify-content: center;
+        }
+        &--container {
+            // min-width: 300px;
+            padding-bottom: 50px;
+            @include phone {
+                text-align: center;
+            }
+            i {
+                font-size: 50px;
+                float: left;
+                padding-top: px;
+                padding-right: 20px;
+            }
+            &--cont {
+                float: right;
+                h3 {
+                    padding-bottom: 10px;
+                }
+            }
+        }
+        &__2 {
+            display: flex;
+            justify-content: center;
+            padding-top: 40px;
+            padding-bottom: 25px;
+            @include phone {
+                flex-wrap: wrap;
+                padding-top: 30px;
+            }
+            i {
+                font-size: 22px;
+                padding: 0 20px;
+            }
+        }
+    }
+    &--horizontal-line {
+        width: 750px;
+        border-top: 2px white solid;
+        margin: 0 auto;
+        padding-bottom: 25px;
+    }
+    &--p {
+        text-align: center;
+        padding-bottom: 50px;
+    }
+    &--decorative {
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        right: -20px;
+        border-left: 160px transparent solid;
+        border-bottom: 160px orange solid;
+        border-right: 160px transparent solid;
+    }
+}

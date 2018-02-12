@@ -1,0 +1,60 @@
+// ----------------- -------------- -------------------
+// ----------------- DOM CSS resets -------------------
+@import "normalize.scss";
+// @import "compass/css3"
+// ----------------- ?? -------------------
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Exo', sans-serif;
+    font-size: $font-size-root;
+    color: $color-font-default;
+}
+html{
+    background: $color-bg1;
+// ----------------- border-box all ?? -------------------
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    overflow-x: hidden;
+    background: transparent;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $color-font-header;
+}
+// -----------------  ?? -------------------
+.h2{
+    @include title1;
+}
+.p {
+    @include paragraph;
+}
+.button {
+    @include button;
+}

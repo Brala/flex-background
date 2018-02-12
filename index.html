@@ -1,155 +1,295 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="utf-8">
-    <title>scrolling Flex background</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
 
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Exo:400,500i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo:400,500i,700|Open+Sans:400,800" rel="stylesheet">
+    <script src="https://use.fontawesome.com/df7a6ecf8c.js"></script>
 </head>
 
 <body>
 
-    <header>
-        <nav class="navbar">
-            <ul>
-                <li>
-                    <a href="">Home</a>
-                    <ul class="navbar__dropdown">
-                        <li>
-                            <a href="#">Check1</a>
-                        </li>
-                        <li>
-                            <a href="#">Check2</a>
-                        </li>
-                        <li>
-                            <a href="#">Check3</a>
-                        </li>
-                        <li>
-                            <a href="#">Check4</a>
-                        </li>
+    <section class="m-hdr">
+        <header class="container?">
+            <a class="m-hdr--logo" id="logo" href="#">Brala Portfolio</a>
+            <nav class="m-hdr--navbar">
+                <ul class="m-hdr--navbar--ul">
+                    <li class="m-hdr--navbar--ul--li">
+                        <a class="m-hdr--navbar--ul--li--a" href="#">Home</a>
+                    </li>
+                    <li class="m-hdr--navbar--ul--li">
+                        <a class="m-hdr--navbar--ul--li--a" href="#">About Us</a>
+                    </li>
+                    <li class="m-hdr--navbar--ul--li">
+                        <a class="m-hdr--navbar--ul--li--a" href="#">Team</a>
+                    </li>
+                    <li class="m-hdr--navbar--ul--li">
+                        <a class="m-hdr--navbar--ul--li--a" href="#">Services</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div>
+            <div class="m-hdr--slogan">
+                <h1>
+                    <span>Think</span>
+                    <span>outside</span>
+                    <span class="m-hdr--slogan__smaller">
+                        <br/>of the box</span>
+                </h1>
+                <a href="#section1" class="m-hdr--slogan--button button">READ MORE</a>
+            </div>
+            <div class="m-hdr--image"></div>
+        </div>
+    </section>
 
-                    </ul>
-                </li>
-                <li>
-                    <a href="">About</a>
-                    <ul class="navbar__dropdown">
-                        <li>
-                            <a href="#">Check1</a>
-                        </li>
-                        <li>
-                            <a href="#">Check2</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="">Products</a>
-                    <ul class="navbar__dropdown">
-                        <li>
-                            <a href="#">Check1</a>
-                        </li>
-                        <li>
-                            <a href="#">Check2</a>
-                        </li>
-                        <li>
-                            <a href="#">Check3</a>
-                            <ul class="navbar__dropdown2">
-                                <li>
-                                    <a href="#">SubCheck1</a>
-                                </li>
-                                <li>
-                                    <a href="#">SubCheck2</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Check4</a>
-                        </li>
-                        <li>
-                            <a href="#">Check5</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
 
-    <div class="background BG1">
-        <article>
-            <section class="section">
-                <h1>If you don't [write introductions] well, then you're denying yourself potential promoters, subscribers, leads,
-                    and even paying customers.</h1>
-                <p>The introduction to a research paper can be the most challenging part of the paper to write. The length of
-                    the introduction will vary depending on the type of research paper you are writing. An introduction should
-                    announce your topic, provide context and a rationale for your work, before stating your research questions
-                    and hypothesis. Well-written introductions set the tone for the paper, catch the reader's interest, and
-                    communicate the hypothesis or thesis statement.</p>
-            </section>
+    <div class="l-background l-BG1" id="section1">
+        <section class="m-section1 wrapper?">
+            <div class="m-section1--decorative"></div>
+            <article class="m-section1--article">
+                <h2 class="h2">Who we are</h2>
+                <p class="p">Based in Warsaw, Poland, The Training Generator was founded in 2017 with a vision to integrate Social Media
+                    Marketing, Email Marketing, Sales Funnel and Website Optimization. The company's mission is to provide
+                    the highest quality performance-based marketing training services for any Business</p>
+                <a class="button">READ MORE</a>
+                <div class="m-section1--image"></div>
+            </article>
+        </section>
+    </div>
+
+
+    <div class="l-background l-BG2">
+        <article class="m-section wrapper?">
+            <h2 class="h2">What we do</h2>
+            <div class="collapsible">
+                <div class="m-section--decorative"></div>
+                <section class="m-section--container">
+                    <div class="m-section--container--icon">
+                        <i class="fa fa-flag" aria-hidden="true"></i>
+                    </div>
+                    <div class="m-section--container--description">
+                        <h3 class="h3">Creative work</h3>
+                        <p class="p" p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ex quaerat, hic dolor est iusto dolorum
+                            repudiandae quasi ipsum ad voluptates </p>
+                    </div>
+                </section>
+                <section class="m-section--container">
+                    <div class="m-section--container--icon">
+                        <i class="fa fa-desktop" aria-hidden="true"></i>
+                    </div>
+                    <div class="m-section--container--description">
+                        <h3 class="h3">We do Best</h3>
+                        <p class="p" p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ex quaerat, hic dolor est iusto dolorum
+                            repudiandae quasi ipsum ad voluptates </p>
+                    </div>
+                </section>
+                <section class="m-section--container">
+                    <div class="m-section--container--icon">
+                        <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    </div>
+                    <div class="m-section--container--description">
+                        <h3 class="h3">Best Company</h3>
+                        <p class="p" p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ex quaerat, hic dolor est iusto dolorum
+                            repudiandae quasi ipsum ad voluptates </p>
+                    </div>
+                </section>
+                <section class="m-section--container">
+                    <div class="m-section--container--icon">
+                        <i class="fa fa-headphones" aria-hidden="true"></i>
+                    </div>
+                    <div class="m-section--container--description">
+                        <h3 class="h3">Nice Idea</h3>
+                        <p class="p" p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ex quaerat, hic dolor est iusto dolorum
+                            repudiandae quasi ipsum ad voluptates </p>
+                    </div>
+                </section>
+                <section class="m-section--container">
+                    <div class="m-section--container--icon">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <div class="m-section--container--description">
+                        <h3 class="h3">Proffesional</h3>
+                        <p class="p" p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ex quaerat, hic dolor est iusto dolorum
+                            repudiandae quasi ipsum ad voluptates </p>
+                    </div>
+                </section>
+                <section class="m-section--container">
+                    <div class="m-section--container--icon">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    </div>
+                    <div class="m-section--container--description">
+                        <h3 class="h3">Great services</h3>
+                        <p class="p" p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ex quaerat, hic dolor est iusto dolorum
+                            repudiandae quasi ipsum ad voluptates </p>
+                    </div>
+                </section>
+
+            </div>
         </article>
     </div>
 
-    <div class="background BG2">
-        <article>
-            <section class="section">
-                <h1>If you don't [write introductions] well, then you're denying yourself potential promoters, subscribers, leads,
-                    and even paying customers.</h1>
-                <p>The introduction to a research paper can be the most challenging part of the paper to write. The length of
-                    the introduction will vary depending on the type of research paper you are writing. An introduction should
-                    announce your topic, provide context and a rationale for your work, before stating your research questions
-                    and hypothesis. Well-written introductions set the tone for the paper, catch the reader's interest, and
-                    communicate the hypothesis or thesis statement.</p>
-            </section>
-            <section class="collapsible">
-                <h2 class="collapser">Collapsible menu Title</h2>
-                <p></p>
-                <h2 class="collapser">Collapsible menu Tittle</h2>
-                <p></p>
-                <h2 class="collapser">Collapsible menu Title</h2>
-                <p></p>
-                <h2 class="collapser">Collapsible menu Title</h2>
-                <p></p>
-                <h2 class="collapser">Collapsible menu Tittle</h2>
-                <p></p>
-                <h2 class="collapser">Collapsible menu Title</h2>
-                <p></p>
+    <div class="l-background l-BG1  sect3">
+        <div class="m-section3 l-wrapper">
+            <div class="m-section3--decorative"></div>
+            <h2 class="h2">How we works</h2>
+            <div class="m-section3--row">
+                <div class="m-section3--row--cnt__text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum fugiat voluptatum nihil, veritatis aut laudantium,
+                        perspiciatis minima exercitationem voluptatem impedit animi vitae nobis inventore ea. Ea similique
+                        magnam voluptatum exercitationem.</p>
+                    <a href="" class="button">READ MORE</a>
+                </div>
+                <div class="m-section3--row--cnt__rhombus">
+                    <p class="m-section3--row--cnt__rhombus--number">1.</p>
+                    <div class="m-section3--row--cnt__rhombus--description">
+                        <h3>Idea</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ex eveniet, accusantium voluptates
+                            iste tempore magnam distinctio </p>
+                    </div>
+                </div>
+                <div class="m-section3--row--cnt__rhombus">
+                    <p class="m-section3--row--cnt__rhombus--number">2.</p>
+                    <div class="m-section3--row--cnt__rhombus--description">
+                        <h3>Design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ex eveniet, accusantium voluptates
+                            iste tempore magnam distinctio </p>
+                    </div>
 
-            </section>
-        </article>
+                </div>
+                <div class="m-section3--row--cnt__rhombus">
+                    <p class="m-section3--row--cnt__rhombus--number">3.</p>
+                    <div class="m-section3--row--cnt__rhombus--description">
+                        <h3>Output</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ex eveniet, accusantium voluptates
+                            iste tempore magnam distinctio </p>
+                    </div>
 
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="background BG3">
-        <article>
-            <section class="section">
-                <h1>If you don't [write introductions] well, then you're denying yourself potential promoters, subscribers, leads,
-                    and even paying customers.</h1>
-                <p>The introduction to a research paper can be the most challenging part of the paper to write. The length of
-                    the introduction will vary depending on the type of research paper you are writing. An introduction should
-                    announce your topic, provide context and a rationale for your work, before stating your research questions
-                    and hypothesis. Well-written introductions set the tone for the paper, catch the reader's interest, and
-                    communicate the hypothesis or thesis statement.</p>
-                <p>The introduction to a research paper can be the most challenging part of the paper to write. The length of
-                    the introduction will vary depending on the type of research paper you are writing. An introduction should
-                    announce your topic, provide context and a rationale for your work, before stating your research questions
-                    and hypothesis. Well-written introductions set the tone for the paper, catch the reader's interest, and
-                    communicate the hypothesis or thesis statement.</p>
-                <p>The introduction to a research paper can be the most challenging part of the paper to write. The length of
-                    the introduction will vary depending on the type of research paper you are writing. An introduction should
-                    announce your topic, provide context and a rationale for your work, before stating your research questions
-                    and hypothesis. Well-written introductions set the tone for the paper, catch the reader's interest, and
-                    communicate the hypothesis or thesis statement.</p>
-            </section>
-        </article>
+    <div class="l-background l-BG2">
+        <div class="m-section4 l-wrapper">
+            <h2 class="m-section4--h2 h2">Our creative Team</h2>
+
+            <div class="m-section4--cnt">
+                    <div class="m-section4--cnt--button-left"></div>
+                    <div class="m-section4--cnt--button-right"></div>
+    
+                <div class="m-section4--cnt--card">
+                    <div class="m-section4--cnt--card--rhomb">
+                        <img src="../img/layer14.png" class="m-section4--cnt--card--rhomb--img" alt="">
+                        <p class="m-section4--cnt--card--name">Jimmy Doe</p>
+                        <p class="m-section4--cnt--card--title">Designer</p>
+                    </div>
+                </div>
+                <div class="m-section4--cnt--card is-active">
+                    <div class="m-section4--cnt--card--rhomb">
+                        <img src="../img/layer18.png" class="m-section4--cnt--card--rhomb--img" alt="">
+                    </div>
+                    <p class="m-section4--cnt--card--name">Jimmy Doe</p>
+                    <p class="m-section4--cnt--card--title">Designer</p>
+                </div>
+                <div class="m-section4--cnt--card">
+                    <div class="m-section4--cnt--card--rhomb">
+                        <img src="../img/layer15.png" class="m-section4--cnt--card--rhomb--img" alt="">
+                    </div>
+                    <p class="m-section4--cnt--card--name">Jimmy Doe</p>
+                    <p class="m-section4--cnt--card--title">Designer</p>
+                </div>
+            </div>
+            <div class="decorative"></div>
+        </div>
     </div>
 
-    <footer>
-        <nav>
+    <div class="l-background l-BG1">
+        <div class="m-section5 l-wrapper">
+            <h2 class="m-section5--h2 h2">What client says</h2>
+            <div class="m-section5--cnt">
+                <i class="fa fa-quote-left m-section5--cnt--icon" aria-hidden="true"></i>
+                <p class="m-section5--cnt--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum distinctio natus, nesciunt nulla, qui vitae
+                    accusantium recusandae architecto nobis error voluptatem esse. Recusandae consectetur at inventore corrupti
+                    expedita, aspernatur pariatur.</p>
+                <p class="m-section5--cnt--author">Jinny Snow, Company CEO</p>
+                <div class="m-section5--cnt--photos">
+                    <div class="m-section5--portrait__small">
+                        <div class="m-section5--portrait--rhomb__small">
+                            <img src="../img/layer14.png" class="m-section5--portrait--rhomb--img__small" alt="">
+                        </div>
+                    </div>
+                    <div class="m-section5--portrait__small">
+                        <div class="m-section5--portrait--rhomb__small">
+                            <img src="../img/layer15.png" class="m-section5--portrait--rhomb--img__small" alt="">
+                        </div>
+                    </div>
+                    <div class="m-section5--portrait__small">
+                        <div class="m-section5--portrait--rhomb__small">
+                            <img src="../img/layer17.png" class="m-section5--portrait--rhomb--img__small" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="decorative"></div>
+            <div class="decorative2"></div>
+            <div class="m-section5--portrait__large">
+                <div class="m-section5--portrait--rhomb__large">
+                    <img src="../img/layer17.png" class="m-section5--portrait--rhomb--img__large" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
 
-        </nav>
-    </footer>
+    <footer class="l-BGFooter">
+        <div class="foo l-wrapper">
+            <h2 class="foo--h2 h2">Get in touch</h2>
+            <div class="foo--flex">
+                <div class="foo--flex--container">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    <div class="foo--flex--container--cont">
+                        <h3>Email</h3>
+                        <p>awesome.name@great.ff</p>
+                        <p>fancy.surname@psd.ff</p>
+                    </div>
+                </div>
+                <div class="foo--flex--container">
+                    <i class="fa fa-mobile" aria-hidden="true"></i>
+                    <div class="foo--flex--container--cont">
+                        <h3>Phone</h3>
+                        <p>+123 456 7890</p>
+                        <p>+123 456 7890</p>
+                    </div>
+                </div>
+                <div class="foo--flex--container">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <div class="foo--flex--container--cont">
+                        <h3>Office</h3>
+                        <p>123, Main Road, New City</p>
+                        <p>My Country 1234</p>
+                    </div>
+                </div>
+            </div>
+            <div class="foo--flex__2">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-google-plus" aria-hidden="true"></i>
+                <i class="fa fa-vk" aria-hidden="true"></i>
+                <i class="fa fa-youtube" aria-hidden="true"></i>
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                <i class="fa fa-digg" aria-hidden="true"></i>
+                <i class="fa fa-deviantart" aria-hidden="true"></i>
+            </div>
+            <div class="foo--horizontal-line"></div>
+            <p class="foo--p">Inspired by PSD ... Copyright c 2017. PSDFreebies.com | Best PSD Template for freelancer and agencies</p>
+        </div>
+        <div class="foo--decorative"></div>
 
-    <script src="js/script.js"></script>
+        </foo>
+        <script src="js/script.js"></script>
 </body>
 
 </html>

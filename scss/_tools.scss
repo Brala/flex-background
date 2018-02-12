@@ -1,0 +1,140 @@
+// ----------------- ------------ -------------------
+// ----------------- SASS @mixins -------------------
+// ----------------- ------------ -------------------
+// ----------------- RWD - desktop first -------------------
+@mixin phone {
+    @media only screen and (max-width: 479px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 480px) and (max-width: 1024px) {
+        @content;
+    }
+}
+// ----------------- RWD - alternate -------------------
+@mixin screen($size) {
+    $desktop: "(min-width: 1024px)";
+    $tablet: "(min-width: 768px) and (max-width: 1023px)";
+    $mobile: "(max-width: 767px)";
+    @if $size == desktop {
+      @media only screen and #{$desktop} {
+        @content;
+      }
+    }
+    @else if $size == tablet {
+      @media only screen and #{$tablet} {
+        @content;
+      }
+    }
+    @else if $size == mobile {
+      @media only screen and #{$mobile} {
+        @content;
+      }
+    }
+    @else {
+      @media only screen and #{$size} {
+        @content;
+      }
+    }
+  }
+// ----------------- Micro Clearfix -------------------
+@mixin clearFix {
+    zoom: 0; // IE8
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+// ----------------- Add X/Y dimensions -------------------
+@mixin box($width, $height:$width) {
+    width: $width;
+    height: $height;
+  }
+// ----------------- Positioning -------------------
+@mixin position($position, $args) {
+    @each $o in top right bottom left {
+        $i: index($args, $o);
+        @if $i and $i+1 <=length($args) and type-of(nth($args, $i + 1))==number {
+            #{$o}: nth($args, $i + 1);
+        }
+    }
+    position: $position;
+} // Positioning helpers
+@mixin absolute($args: '') {
+    @include position(absolute, $args);
+}
+
+@mixin fixed($args: '') {
+    @include position(fixed, $args);
+}
+
+@mixin relative($args: '') {
+    @include position(relative, $args);
+}
+// ----------------- Centering a block -------------------
+@mixin center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+// ----------------- Vertical centering -------------------
+  @mixin center-vertically {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+// ----------------- CSS-Tricks -------------------
+// ----------------- embossing & letterpress effects  -------------------
+  @mixin box-emboss($outerOpacity, $innerOpacity) {
+    box-shadow:
+      rgba(white, $outerOpacity) 0 1px 0, 
+      rgba(black, $innerOpacity) 0 1px 0 inset;
+  }
+  %box-emboss {
+    @include box-emboss(0.7, 0.4);
+  }
+
+
+// ----------------- ------------- -------------------
+// ----------------- Custom mixins -------------------
+// ----------------- ------------- -------------------
+@mixin button {
+    background-image: linear-gradient(rgba(188, 50, 50, 0.9), $color-bg1);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.45);
+    font-family: 'Exo', sans-serif;
+    font-size: 1rem;
+    transition: box-shadow 100ms ease-out;
+    letter-spacing: 0.6vw;
+    &:hover {
+        background-color: green;
+        box-shadow: 0 0 3rem rgba(255, 255, 255, 0.45);
+    }
+}
+
+@mixin title1 {
+    font-size: 3.5vw;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    @include tablet{
+        font-size: 7vw;
+    }
+    @include phone{
+        font-size: 14vw;
+    }
+}
+
+@mixin paragraph {
+    font-size: 1.1vw;
+    font-family: 'Open Sans', sans-serif;
+    @include tablet{
+        font-size: 2.2vw
+    }
+    @include phone{
+        font-size: 4.4vw;
+    }
+}
