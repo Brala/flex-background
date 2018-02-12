@@ -450,6 +450,24 @@
         justify-content: space-between; // flex-wrap: wrap;
         padding-top: 100px;
         padding-bottom: 200px;
+        position: relative;
+        &--button-left{
+            border-right: $borderColor-decorative2 50px solid;
+            border-top: transparent 50px solid;
+            border-bottom: transparent 50px solid;
+            position: absolute;
+            left: -185px;
+            top: 275px;
+        }
+        &--button-right{
+            border-left: $borderColor-decorative2 50px solid;
+            border-top: transparent 50px solid;
+            border-bottom: transparent 50px solid;
+            position: absolute;
+            right: -185px;
+            top: 275px;
+            
+        }
         &--card {
             // background: pink;
             box-shadow: 0 0 20px lightgrey;
